@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+.pane {
+    overflow-y: auto;
+    /* padding: 10px; */
+}
+
+
+.sidebar {
+    height: 100vh;
+}
+
+
+.sidebar--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar--header > h3 {
+    font-size: 1.75rem;
+    margin: 15px;
+    font-weight: 700;
+}
+
+.new-note {
+    cursor: pointer;
+    background-color: #4A4E74;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
+}
+
+.first-note {
+    cursor: pointer;
+    background-color: #4A4E74;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    padding: 1rem;
+}
+
+.editor {
+    width: 80%;
+    height: 100vh;
+}
+
+.title {
+    overflow: hidden;
+    width: 100%; 
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title > h4 {
+    margin: 15px;
+} 
+
+.title--delete {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.title:hover .title--delete {
+    display: block;
+}
+
+.note-summary:not(:last-of-type) {
+    border-bottom: 1px solid lightgray;
+}
+
+.text-snippet {
+    padding-inline: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    color: #4A4E74;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selected-note {
+    background-color: #4A4E74;
+}
+
+i{
+    margin-right: 10px;
+}
+
+.selected-note i{
+    color: #FFF;
+    margin-right: 10px;
+}
+
+
+.selected-note .text-snippet {
+    color: white;
+    font-weight: 700;
+}
+
+.gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+}
+
+.gutter.gutter-horizontal:hover {
+    cursor: col-resize;
+}
+
+.split {
+    display: flex;
+}
+
+.no-notes {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.delete-btn {
+    display: none;
+    background: none;
+    border: none;
+}
+
+.title:hover > .delete-btn {
+    display: block;
+}
+
